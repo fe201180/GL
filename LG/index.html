@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Luis Fernando & Gabriella — Uma História Escrita por Deus</title>
+<meta name="description" content="A história de amor de Luis Fernando Visconti e Gabriella Trettel Dermondes."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bege:#F5E6D3;--bege2:#FAF3EB;--marrom:#6B4F3A;--marrom2:#4A3328;
+  --azul:#1F3A5F;--azul2:#2A4F7A;--vinho:#8B1E3F;--vinho2:#A8254C;
+  --preto:#0A0C14;--branco:#FFFFFF;--ouro:#C9A84C;--ouro2:#E2C47A;--ouro3:#F5DFA0;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Cormorant Garamond',Georgia,serif;
+  --fu:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--preto);color:var(--bege);font-family:var(--fb);font-size:18px;line-height:1.8;overflow-x:hidden}
+
+/* ══ INTRO SCREEN ══ */
+#intro{position:fixed;inset:0;z-index:9999;background:#050709;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 1.2s ease,visibility 1.2s ease}
+#intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+.intro-for{font-family:var(--fu);font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:rgba(201,168,76,.5);margin-bottom:24px;opacity:0;animation:fadeIn 1s .5s forwards}
+.intro-name{font-family:var(--fd);font-size:clamp(3rem,10vw,7rem);font-weight:400;color:var(--branco);line-height:1;letter-spacing:-.02em;overflow:hidden}
+.intro-name span{display:inline-block;opacity:0;transform:translateY(60px)}
+.intro-subtitle{font-family:var(--fb);font-style:italic;font-size:1.2rem;color:rgba(245,230,211,.5);margin-top:20px;opacity:0;animation:fadeIn 1s 2.5s forwards}
+.intro-line{width:0;height:1px;background:linear-gradient(to right,transparent,var(--ouro),transparent);margin:28px auto;animation:lineGrow 1s 2.2s forwards}
+.intro-enter{margin-top:40px;font-family:var(--fu);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro);border:1px solid rgba(201,168,76,.4);padding:14px 40px;cursor:pointer;background:none;transition:all .3s;opacity:0;animation:fadeIn .8s 3s forwards}
+.intro-enter:hover{background:rgba(201,168,76,.1);border-color:var(--ouro);letter-spacing:.25em}
+
+/* ══ PARTICLES ══ */
+#cv{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+/* ══ PETALS ══ */
+#petals{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.petal{position:absolute;top:-20px;width:10px;height:10px;border-radius:50% 0 50% 0;background:rgba(139,30,63,.5);animation:petalFall linear infinite;opacity:0}
+@keyframes petalFall{
+  0%{transform:translateY(0) rotate(0deg) translateX(0);opacity:.7}
+  25%{transform:translateY(25vh) rotate(90deg) translateX(30px);opacity:.5}
+  50%{transform:translateY(50vh) rotate(180deg) translateX(-20px);opacity:.4}
+  75%{transform:translateY(75vh) rotate(270deg) translateX(25px);opacity:.2}
+  100%{transform:translateY(105vh) rotate(360deg) translateX(-10px);opacity:0}
+}
+
+/* ══ NAV ══ */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 48px;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
+nav.sc{background:rgba(5,7,9,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(201,168,76,.15);padding:14px 48px}
+.nl{font-family:var(--fd);font-size:1rem;color:var(--ouro2);font-style:italic;letter-spacing:.04em}
+.nr{display:flex;gap:28px;list-style:none}
+.nr a{font-family:var(--fu);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,230,211,.6);text-decoration:none;transition:color .3s}
+.nr a:hover{color:var(--ouro2)}
+.nt{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nt span{display:block;width:22px;height:1px;background:rgba(245,230,211,.6);transition:all .3s}
+
+/* ══ HERO ══ */
+#hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;z-index:2;overflow:hidden}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(31,58,95,.7) 0%,transparent 65%),radial-gradient(ellipse 50% 40% at 15% 85%,rgba(139,30,63,.35) 0%,transparent 55%),radial-gradient(ellipse 40% 40% at 85% 75%,rgba(201,168,76,.12) 0%,transparent 55%),linear-gradient(180deg,#060912 0%,#0D1628 50%,#100818 100%);z-index:-1}
+.moon{position:absolute;top:4%;right:5%;width:320px;height:240px;background-image:url('moon_venus.jpg');background-size:cover;background-position:center;mix-blend-mode:screen;opacity:0.92;filter:drop-shadow(0 0 40px rgba(255,248,231,0.15));-webkit-mask-image:radial-gradient(ellipse 70% 70% at 55% 50%,rgba(0,0,0,1) 30%,rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 70% 70% at 55% 50%,rgba(0,0,0,1) 30%,rgba(0,0,0,0) 100%);animation:moonFloat 8s ease-in-out infinite}
+@keyframes moonFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-12px) scale(1.02)}}
+.h-ey{font-family:var(--fu);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro);margin-bottom:20px;opacity:0;animation:fadeUp 1s .3s forwards}
+.h-t{font-family:var(--fd);font-size:clamp(2.8rem,7vw,5.8rem);font-weight:500;color:var(--branco);line-height:1.08;letter-spacing:-.01em;margin-bottom:10px;opacity:0;animation:fadeUp 1s .5s forwards}
+.h-t em{color:var(--ouro2);font-style:italic}
+.h-s{font-family:var(--fb);font-size:clamp(.95rem,2.5vw,1.25rem);color:rgba(245,230,211,.7);max-width:540px;font-style:italic;margin-bottom:36px;opacity:0;animation:fadeUp 1s .7s forwards}
+.h-names{font-family:var(--fd);font-size:clamp(1rem,2.8vw,1.5rem);color:var(--ouro2);letter-spacing:.06em;margin-bottom:44px;opacity:0;animation:fadeUp 1s .8s forwards}
+.h-names span{color:rgba(245,230,211,.4);margin:0 14px}
+.btn{display:inline-block;font-family:var(--fu);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--preto);background:linear-gradient(135deg,var(--ouro2),var(--ouro));padding:16px 44px;border-radius:2px;text-decoration:none;transition:all .35s;opacity:0;animation:fadeUp 1s .95s forwards;position:relative;overflow:hidden}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.2),transparent);opacity:0;transition:opacity .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(201,168,76,.4)}
+.btn:hover::after{opacity:1}
+.scrl{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeIn 1s 1.6s forwards}
+.scrl-l{width:1px;height:52px;background:linear-gradient(to bottom,transparent,var(--ouro));animation:scrlP 2s ease-in-out infinite}
+.scrl-t{font-family:var(--fu);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,230,211,.35)}
+
+/* ══ COUNTERS BAR ══ */
+#counters{position:relative;z-index:2;padding:0 24px;margin-top:-2px}
+.cnt-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.15);border-radius:4px;overflow:hidden}
+.cnt-box{background:rgba(5,7,9,.9);backdrop-filter:blur(20px);padding:36px 24px;text-align:center;transition:background .3s}
+.cnt-box:hover{background:rgba(31,58,95,.3)}
+.cnt-box:hover #editIcon{opacity:1!important}
+.cnt-label{font-family:var(--fu);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,168,76,.65);margin-bottom:10px}
+.cnt-val{font-family:var(--fd);font-size:clamp(1.8rem,4vw,2.8rem);color:var(--branco);letter-spacing:-.02em;line-height:1}
+.cnt-val em{color:var(--ouro2)}
+.cnt-sub{font-family:var(--fb);font-style:italic;font-size:.85rem;color:rgba(245,230,211,.35);margin-top:8px}
+.prog-wrap{margin-top:14px;height:2px;background:rgba(255,255,255,.06);border-radius:1px;overflow:hidden}
+.prog-bar{height:100%;border-radius:1px;background:linear-gradient(to right,var(--ouro),var(--ouro2));transition:width 1.5s ease;width:0}
+
+/* ══ SECTIONS ══ */
+section{position:relative;z-index:2;padding:120px 24px}
+.c{max-width:900px;margin:0 auto}
+.cw{max-width:1100px;margin:0 auto}
+.ey{font-family:var(--fu);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ouro);margin-bottom:14px;display:block}
+.st{font-family:var(--fd);font-size:clamp(2rem,5vw,3.4rem);font-weight:500;line-height:1.12;margin-bottom:28px;color:var(--branco)}
+.st em{color:var(--ouro2);font-style:italic}
+.tx{font-family:var(--fb);font-size:1.1rem;line-height:1.95;color:rgba(245,230,211,.78)}
+.div{display:flex;align-items:center;gap:14px;margin:36px 0}
+.div-l{flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.35),transparent)}
+.div-s{color:var(--ouro);font-size:.85rem}
+.gc{background:rgba(255,255,255,.035);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(201,168,76,.16);border-radius:4px;padding:48px}
+
+/* ══ PARALLAX SECTIONS ══ */
+.px-bg{position:absolute;inset:0;z-index:-1;transform:translateZ(0);will-change:transform}
+
+/* ══ ENCONTRO ══ */
+#encontro{background:linear-gradient(180deg,transparent,rgba(31,58,95,.07) 50%,transparent)}
+.eg{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.db{display:inline-flex;align-items:center;gap:8px;font-family:var(--fu);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro);border:1px solid rgba(201,168,76,.3);padding:8px 20px;border-radius:2px;margin-bottom:24px}
+
+/* ══ FÉ ══ */
+#fe{text-align:center;background:linear-gradient(180deg,transparent,rgba(139,30,63,.07) 50%,transparent)}
+.vb{margin:44px auto;max-width:580px;padding:32px 40px;border-left:2px solid var(--ouro);text-align:left;background:rgba(201,168,76,.04)}
+.vt{font-family:var(--fd);font-size:1.25rem;font-style:italic;color:var(--ouro2);line-height:1.65;margin-bottom:10px}
+.vr{font-family:var(--fu);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(201,168,76,.55)}
+
+/* ══ ERIC ══ */
+#eric{background:linear-gradient(180deg,transparent,rgba(245,230,211,.025) 50%,transparent)}
+.egl{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+
+/* ══ ROTINA ══ */
+#rotina{background:linear-gradient(180deg,transparent,rgba(31,58,95,.05) 50%,transparent)}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.map{background:rgba(31,58,95,.14);border:1px solid rgba(201,168,76,.18);border-radius:4px;padding:32px;height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.mgb{position:absolute;inset:0;opacity:.06;background-image:linear-gradient(rgba(201,168,76,1) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,1) 1px,transparent 1px);background-size:30px 30px}
+.mpin{width:18px;height:18px;border-radius:50% 50% 50% 0;background:var(--vinho);transform:rotate(-45deg);box-shadow:0 0 0 5px rgba(139,30,63,.25),0 0 24px rgba(139,30,63,.6)}
+.mlbl{font-family:var(--fd);font-size:1.25rem;color:var(--branco)}
+.mslbl{font-family:var(--fu);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,230,211,.4)}
+
+/* ══ QUEM SOMOS ══ */
+#quemsomos{text-align:center}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px}
+.pc{background:rgba(255,255,255,.035);border:1px solid rgba(201,168,76,.16);border-radius:4px;padding:48px 32px;text-align:center;transition:all .4s;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,.07),transparent 60%);opacity:0;transition:opacity .4s}
+.pc:hover::before{opacity:1}
+.pc:hover{border-color:rgba(201,168,76,.38);transform:translateY(-5px);box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.pm{width:150px;height:150px;border-radius:50%;border:1.5px solid rgba(201,168,76,.45);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--fd);font-size:1.4rem;color:var(--ouro2);transition:all 0.3s}
+.pc:hover .pm{border-color:var(--ouro);box-shadow:0 0 20px rgba(201,168,76,0.3)}
+.pc-edit-btn{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:rgba(5,7,9,0.85);border:1px solid rgba(201,168,76,0.4);color:var(--ouro2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.8rem;opacity:0;transition:all 0.3s;z-index:5}
+.pc:hover .pc-edit-btn{opacity:1}
+.pc-edit-btn:hover{background:var(--ouro);color:var(--preto);border-color:var(--ouro)}
+.pn{font-family:var(--fd);font-size:1.45rem;color:var(--branco);margin-bottom:6px}
+.pr{font-family:var(--fu);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro);margin-bottom:26px}
+.pt{list-style:none;display:flex;flex-direction:column;gap:10px}
+.pt li{font-family:var(--fb);font-size:1rem;color:rgba(245,230,211,.68);display:flex;align-items:center;justify-content:center;gap:10px}
+.td{width:4px;height:4px;border-radius:50%;background:var(--ouro);flex-shrink:0}
+
+/* ══ SONHOS ══ */
+#sonhos{text-align:center;background:linear-gradient(180deg,transparent,rgba(139,30,63,.06) 40%,transparent)}
+
+/* ══ TIMELINE ══ */
+#timeline{background:linear-gradient(180deg,transparent,rgba(31,58,95,.07) 50%,transparent)}
+.tlt{text-align:center;margin-bottom:80px}
+.tltr{position:relative;max-width:680px;margin:0 auto}
+.tll{position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,168,76,.38) 8%,rgba(201,168,76,.38) 92%,transparent);transform:translateX(-50%)}
+.tli{display:grid;grid-template-columns:1fr 20px 1fr;gap:28px;align-items:center;margin-bottom:48px;opacity:0;transform:translateY(22px);transition:all .65s ease}
+.tli.vis{opacity:1;transform:translateY(0)}
+.tli:nth-child(odd) .tlc{text-align:right}
+.tli:nth-child(even) .tlc{grid-column:3;text-align:left}
+.tli:nth-child(even) .tle{grid-column:1}
+.tld2{width:12px;height:12px;border-radius:50%;background:var(--ouro);border:2px solid rgba(201,168,76,.3);box-shadow:0 0 18px rgba(201,168,76,.55);grid-column:2;justify-self:center}
+.tld2.fut{background:transparent;border:1px solid rgba(201,168,76,.35);box-shadow:none}
+.tld{font-family:var(--fu);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro);margin-bottom:5px}
+.tle2{font-family:var(--fd);font-size:1.05rem;color:var(--branco);margin-bottom:3px}
+.tlde{font-family:var(--fb);font-size:.92rem;color:rgba(245,230,211,.5);font-style:italic}
+
+/* ══ GALERIA ══ */
+#galeria{text-align:center;background:linear-gradient(180deg,transparent,rgba(201,168,76,.03) 50%,transparent)}
+.gg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.pol{background:rgba(250,245,235,.05);border:1px solid rgba(201,168,76,.15);padding:14px 14px 52px;border-radius:2px;transform:rotate(var(--rot,0deg));transition:transform .4s,box-shadow .4s;cursor:pointer;position:relative}
+.pol:nth-child(1){--rot:-1.8deg}.pol:nth-child(2){--rot:1.2deg}.pol:nth-child(3){--rot:-.7deg}
+.pol:nth-child(4){--rot:1.5deg}.pol:nth-child(5){--rot:-1deg}.pol:nth-child(6){--rot:.9deg}
+.pol:hover{transform:rotate(0) scale(1.05);box-shadow:0 24px 64px rgba(0,0,0,.55),0 0 0 1px rgba(201,168,76,.28);z-index:10}
+.pi{aspect-ratio:1;background:rgba(31,58,95,.18);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.pi img, .pi video{width:100%;height:100%;object-fit:cover;display:block}
+.video-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:rgba(5,7,9,0.75);border:1.5px solid var(--ouro2);color:var(--ouro2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;pointer-events:none;z-index:2;transition:all 0.3s}
+.pol:hover .video-badge{background:var(--ouro);color:var(--preto);border-color:var(--ouro);transform:translate(-50%,-50%) scale(1.1)}
+.pp{display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(245,230,211,.28)}
+.pp svg{width:36px;height:36px;opacity:.35}
+.pp span{font-family:var(--fu);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.pc2{position:absolute;bottom:15px;left:0;right:0;text-align:center;font-family:var(--fd);font-style:italic;font-size:.82rem;color:rgba(245,230,211,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px}
+.pol-actions{position:absolute;top:8px;right:8px;display:flex;gap:6px;opacity:0;transition:opacity 0.3s ease;z-index:5}
+.pol:hover .pol-actions{opacity:1}
+.pol-btn{width:26px;height:26px;border-radius:50%;background:rgba(5,7,9,0.85);border:1px solid rgba(201,168,76,0.4);color:var(--ouro2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.7rem;transition:all 0.2s}
+.pol-btn:hover{background:var(--ouro);color:var(--preto);border-color:var(--ouro)}
+
+/* ══ CARTA SECRETA ══ */
+#carta{text-align:center;padding:100px 24px}
+.carta-wrap{max-width:640px;margin:0 auto}
+.carta-envelope{width:80px;height:60px;margin:0 auto 32px;position:relative;cursor:pointer}
+.carta-envelope svg{width:100%;height:100%}
+.carta-content{max-height:0;overflow:hidden;transition:max-height 1.2s ease,opacity .8s ease;opacity:0}
+.carta-content.open{max-height:800px;opacity:1}
+.carta-text{font-family:var(--fd);font-style:italic;font-size:1.15rem;line-height:1.9;color:rgba(245,230,211,.85);text-align:left;padding:36px;border:1px solid rgba(201,168,76,.2);border-radius:2px;background:rgba(201,168,76,.03);margin-top:24px}
+.carta-text p{margin-bottom:16px}
+.carta-assinatura{font-family:var(--fd);font-style:italic;font-size:1.3rem;color:var(--ouro2);margin-top:24px;text-align:right}
+.carta-hint{font-family:var(--fu);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,168,76,.5);margin-top:16px;transition:opacity .4s}
+.carta-hint.hidden{opacity:0}
+
+/* ══ MENSAGEM FINAL ══ */
+#mensagem{text-align:center;padding:140px 24px;background:linear-gradient(180deg,transparent,rgba(139,30,63,.08) 40%,rgba(31,58,95,.1) 70%,transparent)}
+.mb{font-family:var(--fd);font-size:clamp(1.9rem,5vw,3.8rem);font-weight:400;line-height:1.18;color:var(--branco);margin-bottom:22px}
+.mb em{color:var(--ouro2);font-style:italic}
+.ms{font-family:var(--fb);font-size:1.15rem;font-style:italic;color:rgba(245,230,211,.6);max-width:500px;margin:0 auto}
+
+/* ══ FOOTER ══ */
+footer{position:relative;z-index:2;text-align:center;padding:56px 24px;border-top:1px solid rgba(201,168,76,.13)}
+.fn{font-family:var(--fd);font-size:1.55rem;color:var(--ouro2);margin-bottom:14px}
+.fv{font-family:var(--fb);font-style:italic;font-size:.95rem;color:rgba(245,230,211,.45);margin-bottom:20px;max-width:380px;margin-left:auto;margin-right:auto}
+.fy{font-family:var(--fu);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,230,211,.25)}
+
+/* ══ REVEAL ══ */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .85s ease,transform .85s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ══ KEYFRAMES ══ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes lineGrow{from{width:0}to{width:200px}}
+@keyframes scrlP{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.4)}70%{box-shadow:0 0 0 10px rgba(201,168,76,0)}}
+
+/* ══ MUSIC PLAYER ══ */
+#musicPlayer{position:fixed;bottom:28px;right:28px;z-index:500;display:flex;flex-direction:column;gap:8px;background:rgba(5,7,9,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(201,168,76,.22);border-radius:16px;padding:14px 16px 12px;transition:all .4s;box-shadow:0 8px 32px rgba(0,0,0,.5);min-width:220px;max-width:260px}
+#musicPlayer:hover{border-color:rgba(201,168,76,.45)}
+.mp-top{display:flex;align-items:center;gap:10px}
+.mp-controls{display:flex;align-items:center;gap:4px}
+.mp-btn{width:32px;height:32px;border-radius:50%;border:1px solid rgba(201,168,76,.45);background:rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;flex-shrink:0;color:var(--ouro2);font-size:.75rem}
+.mp-btn:hover{background:rgba(201,168,76,.22);border-color:var(--ouro2)}
+.mp-btn.mp-play{width:36px;height:36px;font-size:.9rem}
+.mp-btn-sm{width:26px;height:26px;border-radius:50%;border:1px solid rgba(201,168,76,.3);background:none;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;flex-shrink:0;color:var(--ouro2);font-size:.6rem}
+.mp-btn-sm:hover{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.55)}
+.mp-info{display:flex;flex-direction:column;gap:1px;overflow:hidden;flex:1;min-width:0}
+.mp-title{font-family:var(--fd);font-style:italic;font-size:.78rem;color:var(--ouro2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mp-artist{font-family:var(--fu);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,230,211,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mp-eq{display:flex;align-items:flex-end;gap:2px;height:14px;margin-left:2px;flex-shrink:0}
+.mp-eq span{display:block;width:2px;background:var(--ouro);border-radius:1px;animation:eq 1s ease-in-out infinite}
+.mp-eq span:nth-child(1){animation-delay:0s}
+.mp-eq span:nth-child(2){animation-delay:.2s}
+.mp-eq span:nth-child(3){animation-delay:.4s}
+.mp-eq.paused span{animation-play-state:paused;height:3px!important}
+@keyframes eq{0%,100%{height:3px}50%{height:14px}}
+.mp-progress{width:100%;height:3px;background:rgba(255,255,255,.08);border-radius:2px;cursor:pointer;position:relative;overflow:hidden}
+.mp-progress-bar{height:100%;background:linear-gradient(to right,var(--ouro),var(--ouro2));border-radius:2px;width:0%;transition:width .15s linear}
+.mp-track-num{font-family:var(--fu);font-size:.5rem;letter-spacing:.08em;color:rgba(245,230,211,.25);text-align:center}
+/* ══ VERSÍCULOS ══ */
+#versiculos{background:linear-gradient(180deg,transparent,rgba(31,58,95,.07) 40%,rgba(139,30,63,.05) 70%,transparent)}
+.vs-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:56px}
+.vs-tab{font-family:var(--fu);font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,230,211,.5);border:1px solid rgba(201,168,76,.2);padding:10px 22px;border-radius:40px;cursor:pointer;background:none;transition:all .3s}
+.vs-tab:hover{color:var(--ouro2);border-color:rgba(201,168,76,.5)}
+.vs-tab.active{color:var(--preto);background:linear-gradient(135deg,var(--ouro2),var(--ouro));border-color:transparent;font-weight:500}
+.vs-panel{display:none}.vs-panel.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.vc{background:rgba(255,255,255,.035);border:1px solid rgba(201,168,76,.14);border-radius:4px;padding:32px 28px;position:relative;overflow:hidden;transition:all .4s;opacity:0;transform:translateY(20px)}
+.vc.vis{opacity:1;transform:translateY(0)}
+.vc::before{content:'❝';position:absolute;top:12px;left:16px;font-size:4rem;color:rgba(201,168,76,.08);font-family:Georgia,serif;line-height:1}
+.vc:hover{border-color:rgba(201,168,76,.35);transform:translateY(-4px);background:rgba(255,255,255,.055)}
+.vc-text{font-family:var(--fd);font-style:italic;font-size:1.05rem;line-height:1.75;color:rgba(245,230,211,.85);margin-bottom:16px;position:relative;z-index:1}
+.vc-ref{font-family:var(--fu);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro);display:flex;align-items:center;gap:8px}
+.vc-ref::before{content:'';display:block;width:20px;height:1px;background:var(--ouro);opacity:.6}
+.vc-tag{position:absolute;top:16px;right:16px;font-family:var(--fu);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,168,76,.4);border:1px solid rgba(201,168,76,.15);padding:4px 10px;border-radius:20px}
+/* ══ RESPONSIVE ══ */
+@media(max-width:768px){
+  section{padding:80px 20px}
+  .eg,.egl,.rg{grid-template-columns:1fr;gap:40px}
+  .pg{grid-template-columns:1fr;gap:18px}
+  .gg{grid-template-columns:repeat(3,1fr);gap:12px}
+  .cnt-wrap{grid-template-columns:1fr}
+  nav{padding:16px 20px}
+  nav.sc{padding:12px 20px}
+  .nr{display:none}
+  .nt{display:flex}
+  .gc{padding:28px 22px}
+}
+@media(max-width:480px){.gg{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<!-- ══ INTRO SCREEN ══ -->
+<div id="intro">
+  <p class="intro-for">Para você,</p>
+  <h1 class="intro-name" id="introName"></h1>
+  <div class="intro-line" id="introLine"></div>
+  <p class="intro-subtitle">Uma história escrita especialmente para o seu coração</p>
+  <button class="intro-enter" id="introBtn" onclick="enterSite()">Entrar ♡</button>
+</div>
+
+<!-- ══ CANVAS PARTICLES ══ -->
+<canvas id="cv"></canvas>
+
+<!-- ══ PETALS ══ -->
+<div id="petals"></div>
+
+<!-- ══ MUSIC PLAYER ══ -->
+<div id="musicPlayer">
+  <div class="mp-top">
+    <div class="mp-controls">
+      <button class="mp-btn-sm" id="mpPrev" onclick="prevSong()" aria-label="Música anterior">⏮</button>
+      <button class="mp-btn mp-play" id="mpBtn" onclick="toggleMusic()" aria-label="Tocar música">▶</button>
+      <button class="mp-btn-sm" id="mpNext" onclick="nextSong()" aria-label="Próxima música">⏭</button>
+    </div>
+    <div class="mp-info">
+      <span class="mp-title" id="mpTitle">Lisboa</span>
+      <span class="mp-artist" id="mpArtist">Lenine</span>
+    </div>
+    <div class="mp-eq paused" id="mpEq">
+      <span style="height:6px"></span>
+      <span style="height:10px"></span>
+      <span style="height:4px"></span>
+    </div>
+  </div>
+  <div class="mp-progress" id="mpProgress" onclick="seekMusic(event)">
+    <div class="mp-progress-bar" id="mpProgressBar"></div>
+  </div>
+  <div class="mp-track-num" id="mpTrackNum">1 / 1</div>
+</div>
+<audio id="bgMusic" preload="auto">
+  <source src="lisboa.mp3" type="audio/mpeg">
+  Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="nl">L &amp; G</div>
+  <ul class="nr">
+    <li><a href="#encontro">Início</a></li>
+    <li><a href="#fe">Fé</a></li>
+    <li><a href="#eric">Família</a></li>
+    <li><a href="#sonhos">Sonhos</a></li>
+    <li><a href="#carta">Carta</a></li>
+    <li><a href="#versiculos">Versículos</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+  </ul>
+  <button class="nt" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hbg"></div>
+  <div class="moon"></div>
+  <p class="h-ey">17 de junho · São Paulo · Liberdade</p>
+  <h1 class="h-t">Uma História<br/><em>Escrita por Deus</em></h1>
+  <p class="h-s">"Quando dois caminhos se encontraram,<br/>Deus já havia preparado um propósito maior."</p>
+  <p class="h-names">Luis Fernando Visconti <span>♡</span> Gabriella Trettel Dermondes</p>
+  <a href="#encontro" class="btn">Conheça Nossa História</a>
+  <div class="scrl"><div class="scrl-l"></div><span class="scrl-t">Rolar</span></div>
+</section>
+
+<!-- ══ COUNTERS ══ -->
+<div id="counters">
+  <div class="cnt-wrap rv">
+    <div class="cnt-box">
+      <div class="cnt-label">Dias juntos</div>
+      <div class="cnt-val" id="cDias"><em>—</em></div>
+      <div class="cnt-sub">desde 17 de junho de 2026</div>
+    </div>
+    <div class="cnt-box" style="cursor: pointer; position: relative;" onclick="editHouseGoal()" title="Clique para atualizar os valores">
+      <div class="cnt-label">Sonho da casa</div>
+      <div class="cnt-val"><em>R$ <span id="cMoney">0</span></em></div>
+      <div class="cnt-sub" id="cGoalText">meta: R$ 36.000 · prazo jun/2029</div>
+      <div class="prog-wrap"><div class="prog-bar" id="progBar" style="width:0%"></div></div>
+      <span style="position: absolute; top: 10px; right: 12px; font-size: 0.72rem; opacity: 0.3; transition: opacity 0.3s;" id="editIcon">✏️</span>
+    </div>
+    <div class="cnt-box">
+      <div class="cnt-label">Dias até o prazo</div>
+      <div class="cnt-val" id="cMeta"><em>—</em></div>
+      <div class="cnt-sub">17 de junho de 2029</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ENCONTRO ══ -->
+<section id="encontro">
+  <div class="c">
+    <div class="eg">
+      <div>
+        <span class="ey rv">O começo de tudo</span>
+        <h2 class="st rv d1">O Primeiro<br/><em>Encontro</em></h2>
+        <div class="db rv d1"><span>♡</span>17 de Junho · Liberdade · SP</div>
+        <p class="tx rv d2">No dia 17 de junho, na Liberdade, em São Paulo — um lugar cercado pela cultura japonesa e por momentos especiais — Deus começou a escrever um novo capítulo na vida de Luis Fernando e Gabriella.</p>
+        <div class="div rv d2"><div class="div-l"></div><span class="div-s">✦</span><div class="div-l"></div></div>
+        <p class="tx rv d3">Entre conversas, sorrisos e descobertas, nasceu algo que nenhum dos dois poderia imaginar: uma conexão verdadeira, construída sobre respeito, admiração e propósito.</p>
+      </div>
+      <div class="rv d2" style="display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:300px">
+          <defs><radialGradient id="lg1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#E2C47A" stop-opacity=".5"/><stop offset="100%" stop-color="#E2C47A" stop-opacity="0"/></radialGradient></defs>
+          <rect x="100" y="40" width="8" height="140" rx="2" fill="#8B1E3F" opacity=".9"/>
+          <rect x="192" y="40" width="8" height="140" rx="2" fill="#8B1E3F" opacity=".9"/>
+          <rect x="88" y="48" width="124" height="10" rx="4" fill="#8B1E3F"/>
+          <rect x="96" y="62" width="108" height="7" rx="3" fill="#6B4F3A"/>
+          <line x1="130" y1="69" x2="130" y2="95" stroke="#C9A84C" stroke-width="1" opacity=".7"/>
+          <rect x="120" y="95" width="20" height="30" rx="3" fill="#C9A84C" opacity=".85"/>
+          <ellipse cx="130" cy="97" rx="11" ry="4" fill="#E2C47A" opacity=".9"/>
+          <ellipse cx="130" cy="125" rx="10" ry="3" fill="#E2C47A" opacity=".7"/>
+          <circle cx="130" cy="111" r="10" fill="url(#lg1)"/>
+          <line x1="170" y1="69" x2="170" y2="95" stroke="#C9A84C" stroke-width="1" opacity=".7"/>
+          <rect x="160" y="95" width="20" height="30" rx="3" fill="#C9A84C" opacity=".85"/>
+          <ellipse cx="170" cy="97" rx="11" ry="4" fill="#E2C47A" opacity=".9"/>
+          <ellipse cx="170" cy="125" rx="10" ry="3" fill="#E2C47A" opacity=".7"/>
+          <circle cx="170" cy="111" r="10" fill="url(#lg1)"/>
+          <rect x="30" y="120" width="55" height="100" rx="2" fill="#1F3A5F" opacity=".5"/>
+          <rect x="215" y="110" width="60" height="110" rx="2" fill="#1F3A5F" opacity=".5"/>
+          <rect x="38" y="108" width="8" height="8" rx="1" fill="#C9A84C" opacity=".6"/>
+          <rect x="52" y="108" width="8" height="8" rx="1" fill="#C9A84C" opacity=".4"/>
+          <rect x="222" y="120" width="8" height="8" rx="1" fill="#C9A84C" opacity=".5"/>
+          <rect x="238" y="120" width="8" height="8" rx="1" fill="#C9A84C" opacity=".6"/>
+          <rect x="55" y="180" width="6" height="80" rx="2" fill="#6B4F3A" opacity=".8"/>
+          <line x1="58" y1="210" x2="30" y2="185" stroke="#6B4F3A" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+          <line x1="58" y1="200" x2="80" y2="180" stroke="#6B4F3A" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+          <circle cx="30" cy="180" r="22" fill="#F5E6D3" opacity=".2"/>
+          <circle cx="25" cy="175" r="14" fill="#F5E6D3" opacity=".25"/>
+          <circle cx="58" cy="185" r="20" fill="#F5E6D3" opacity=".18"/>
+          <circle cx="22" cy="168" r="4" fill="#8B1E3F" opacity=".5"/>
+          <circle cx="35" cy="164" r="3" fill="#8B1E3F" opacity=".4"/>
+          <circle cx="78" cy="170" r="3" fill="#8B1E3F" opacity=".4"/>
+          <rect x="240" y="185" width="6" height="75" rx="2" fill="#6B4F3A" opacity=".8"/>
+          <line x1="243" y1="210" x2="268" y2="190" stroke="#6B4F3A" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+          <circle cx="268" cy="186" r="20" fill="#F5E6D3" opacity=".2"/>
+          <circle cx="220" cy="182" r="18" fill="#F5E6D3" opacity=".2"/>
+          <circle cx="265" cy="178" r="3.5" fill="#8B1E3F" opacity=".45"/>
+          <circle cx="222" cy="176" r="3.5" fill="#8B1E3F" opacity=".4"/>
+          <ellipse cx="150" cy="268" rx="120" ry="8" fill="#2A4F7A" opacity=".2"/>
+          <rect x="30" y="258" width="240" height="12" rx="6" fill="#1F3A5F" opacity=".3"/>
+          <ellipse cx="90" cy="140" rx="5" ry="3" fill="#8B1E3F" opacity=".35" transform="rotate(30 90 140)"/>
+          <ellipse cx="200" cy="155" rx="4" ry="2.5" fill="#8B1E3F" opacity=".3" transform="rotate(-20 200 155)"/>
+          <ellipse cx="130" cy="165" rx="4" ry="2" fill="#8B1E3F" opacity=".25" transform="rotate(15 130 165)"/>
+          <circle cx="50" cy="25" r="1.5" fill="#E2C47A" opacity=".8"/>
+          <circle cx="250" cy="18" r="1" fill="#E2C47A" opacity=".6"/>
+          <circle cx="150" cy="12" r="1.5" fill="#E2C47A" opacity=".7"/>
+          <text x="150" y="300" text-anchor="middle" fill="#C9A84C" font-family="Playfair Display,serif" font-style="italic" font-size="11" opacity=".7">Liberdade, São Paulo</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FÉ ══ -->
+<section id="fe">
+  <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:100%;background:radial-gradient(ellipse 50% 60% at 50% 20%,rgba(201,168,76,.05) 0%,transparent 70%);pointer-events:none"></div>
+  <div class="c">
+    <div style="display:flex;justify-content:center;margin-bottom:44px;" class="rv">
+      <svg width="56" height="72" viewBox="0 0 56 72" fill="none">
+        <rect x="23" y="0" width="10" height="72" rx="2" fill="#C9A84C" opacity=".78"/>
+        <rect x="6" y="20" width="44" height="10" rx="2" fill="#C9A84C" opacity=".78"/>
+        <rect x="25" y="2" width="6" height="68" rx="1" fill="#E2C47A" opacity=".35"/>
+        <rect x="8" y="22" width="40" height="6" rx="1" fill="#E2C47A" opacity=".35"/>
+        <ellipse cx="28" cy="25" rx="26" ry="22" fill="#C9A84C" opacity=".05"/>
+      </svg>
+    </div>
+    <span class="ey rv" style="text-align:center;display:block">O alicerce de tudo</span>
+    <h2 class="st rv d1" style="text-align:center">Cristo no<br/><em>Centro</em></h2>
+    <p class="tx rv d2" style="max-width:600px;margin:0 auto">Nosso relacionamento é fundamentado em Cristo. Acreditamos que o amor verdadeiro não é apenas um sentimento, mas uma decisão diária de servir, cuidar, respeitar e crescer juntos diante de Deus.</p>
+    <div class="div rv d2" style="max-width:380px;margin:32px auto"><div class="div-l"></div><span class="div-s">✦</span><div class="div-l"></div></div>
+    <p class="tx rv d3" style="max-width:560px;margin:0 auto 44px">Cada passo que damos é guiado pela fé e pela certeza de que Deus conduz nossa história.</p>
+    <div class="vb rv d3">
+      <p class="vt">"Portanto, o que Deus uniu, ninguém separa."</p>
+      <p class="vr">— Mateus 19:6</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ERIC ══ -->
+<section id="eric">
+  <div class="c">
+    <div class="egl">
+      <div>
+        <span class="ey rv">Um presente de Deus</span>
+        <h2 class="st rv d1">Um Presente<br/><em>Chamado Eric</em></h2>
+        <p class="tx rv d2">Junto com Gabriella veio um dos maiores presentes desta história: Eric.</p>
+        <div class="div rv d2"><div class="div-l"></div><span class="div-s">✦</span><div class="div-l"></div></div>
+        <p class="tx rv d3">Com seus 3 aninhos, ele ilumina nossos dias com alegria, inocência e amor. Mais do que construir um relacionamento, estamos construindo uma família.</p>
+      </div>
+      <div class="rv d2">
+        <div class="gc" style="text-align:center;padding:40px 28px">
+          <div style="display:flex;justify-content:center;align-items:flex-end;gap:18px;margin-bottom:20px">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+              <div style="width:40px;height:40px;border-radius:50%;background-image:url('luis_mirror.jpg');background-size:cover;background-position:center;border:2px solid rgba(201,168,76,.4)"></div>
+              <div style="width:34px;height:52px;background:linear-gradient(135deg,#1F3A5F,#0D1628);border-radius:4px 4px 10px 10px"></div>
+              <span style="font-family:var(--fu);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,230,211,.4)">Luis</span>
+            </div>
+            <div style="margin-bottom:28px;font-size:1.1rem;color:var(--ouro);animation:pulse 2s ease-in-out infinite">♡</div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+              <div style="width:40px;height:40px;border-radius:50%;background-image:url('gabi_kissy.jpg');background-size:cover;background-position:center;border:2px solid rgba(201,168,76,.4)"></div>
+              <div style="width:34px;height:52px;background:linear-gradient(135deg,#6B1530,#4A0E21);border-radius:4px 4px 10px 10px"></div>
+              <span style="font-family:var(--fu);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,230,211,.4)">Gabriella</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:22px">
+            <div style="width:100px;height:100px;border-radius:50%;background-image:url('eric_bear.jpg');background-size:cover;background-position:center;border:3px solid var(--ouro);box-shadow:0 0 24px rgba(201,168,76,.65);transition:transform 0.3s" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="width:68px;height:84px;background:linear-gradient(135deg,#C9A84C,#8B6A30);border-radius:6px 6px 14px 14px"></div>
+            <span style="font-family:var(--fu);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ouro);font-weight:600">Eric</span>
+          </div>
+          <div class="div"><div class="div-l"></div><span class="div-s">★</span><div class="div-l"></div></div>
+          <p style="font-family:var(--fd);font-style:italic;font-size:1rem;color:rgba(245,230,211,.65);margin-top:14px;line-height:1.65">"Três vidas, um propósito."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ROTINA ══ -->
+<section id="rotina">
+  <div class="c">
+    <div class="rg">
+      <div>
+        <span class="ey rv">Dia após dia</span>
+        <h2 class="st rv d1">Perto um<br/><em>do Outro</em></h2>
+        <p class="tx rv d2">Morando na Vila Matilde, compartilhamos sonhos, planos e a alegria de viver próximos.</p>
+        <div class="div rv d2"><div class="div-l"></div><span class="div-s">✦</span><div class="div-l"></div></div>
+        <p class="tx rv d3">Cada encontro fortalece a certeza de que estamos caminhando na direção certa — juntos.</p>
+      </div>
+      <div class="map rv d2">
+        <div class="mgb"></div>
+        <svg width="160" height="100" viewBox="0 0 160 100" style="position:absolute;opacity:.12">
+          <line x1="0" y1="50" x2="160" y2="50" stroke="#C9A84C" stroke-width="1"/>
+          <line x1="80" y1="0" x2="80" y2="100" stroke="#C9A84C" stroke-width="1"/>
+          <line x1="26" y1="0" x2="26" y2="100" stroke="#C9A84C" stroke-width=".5"/>
+          <line x1="134" y1="0" x2="134" y2="100" stroke="#C9A84C" stroke-width=".5"/>
+          <line x1="0" y1="25" x2="160" y2="25" stroke="#C9A84C" stroke-width=".5"/>
+          <line x1="0" y1="75" x2="160" y2="75" stroke="#C9A84C" stroke-width=".5"/>
+          <rect x="55" y="32" width="50" height="36" rx="2" stroke="#C9A84C" stroke-width=".5" fill="none"/>
+        </svg>
+        <div class="mpin"></div>
+        <div class="mlbl">Vila Matilde</div>
+        <div class="mslbl">São Paulo · SP · Brasil</div>
+        <div style="position:absolute;bottom:14px;right:14px;font-family:var(--fu);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,230,211,.22)">Zona Leste</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUEM SOMOS ══ -->
+<section id="quemsomos">
+  <div class="cw">
+    <span class="ey rv" style="display:block;text-align:center">As pessoas por trás desta história</span>
+    <h2 class="st rv d1" style="text-align:center">Quem<br/><em>Somos</em></h2>
+    <div class="pg" id="profilesContainer">
+      <!-- Perfis injetados via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ══ SONHOS ══ -->
+<section id="sonhos">
+  <div class="c" style="text-align:center">
+    <span class="ey rv">Para onde vamos</span>
+    <h2 class="st rv d1">O Futuro que<br/><em>Sonhamos</em></h2>
+    <div class="rv d1" style="margin:36px auto;display:flex;justify-content:center">
+      <svg width="130" height="65" viewBox="0 0 130 65" fill="none">
+        <circle cx="46" cy="33" r="26" stroke="#C9A84C" stroke-width="5" fill="none" opacity=".85"/>
+        <circle cx="46" cy="33" r="26" stroke="#E2C47A" stroke-width="1.5" fill="none" opacity=".3"/>
+        <circle cx="84" cy="33" r="26" stroke="#C9A84C" stroke-width="5" fill="none" opacity=".85"/>
+        <circle cx="84" cy="33" r="26" stroke="#E2C47A" stroke-width="1.5" fill="none" opacity=".3"/>
+        <circle cx="46" cy="7" r="3" fill="#E2C47A" opacity=".9"/>
+        <circle cx="84" cy="7" r="3" fill="#E2C47A" opacity=".9"/>
+        <line x1="46" y1="1" x2="46" y2="4" stroke="#E2C47A" stroke-width="1.5" opacity=".8"/>
+        <line x1="40" y1="7" x2="38" y2="7" stroke="#E2C47A" stroke-width="1.5" opacity=".7"/>
+        <line x1="52" y1="7" x2="54" y2="7" stroke="#E2C47A" stroke-width="1.5" opacity=".7"/>
+        <line x1="84" y1="1" x2="84" y2="4" stroke="#E2C47A" stroke-width="1.5" opacity=".8"/>
+        <line x1="78" y1="7" x2="76" y2="7" stroke="#E2C47A" stroke-width="1.5" opacity=".7"/>
+        <line x1="90" y1="7" x2="92" y2="7" stroke="#E2C47A" stroke-width="1.5" opacity=".7"/>
+      </svg>
+    </div>
+    <div class="gc rv d2" style="max-width:620px;margin:0 auto">
+      <p class="tx">Nosso maior sonho é construir um lar cheio de amor, fé, respeito e união.</p>
+      <div class="div" style="margin:26px 0"><div class="div-l"></div><span class="div-s">✦</span><div class="div-l"></div></div>
+      <p class="tx">Queremos crescer juntos, superar desafios, criar memórias e viver o propósito que Deus preparou para nós.</p>
+    </div>
+    <div class="rv d3" style="margin-top:48px">
+      <svg width="240" height="150" viewBox="0 0 240 150" fill="none" style="margin:0 auto;display:block;opacity:.72">
+        <circle cx="20" cy="15" r="1.5" fill="#E2C47A" opacity=".7"/>
+        <circle cx="220" cy="10" r="1" fill="#E2C47A" opacity=".6"/>
+        <circle cx="120" cy="5" r="2" fill="#E2C47A" opacity=".8"/>
+        <circle cx="50" cy="8" r="1" fill="#E2C47A" opacity=".5"/>
+        <circle cx="185" cy="18" r="1.5" fill="#E2C47A" opacity=".6"/>
+        <rect x="60" y="75" width="120" height="72" rx="2" fill="#1F3A5F" opacity=".7"/>
+        <polygon points="48,80 120,28 192,80" fill="#8B1E3F" opacity=".7"/>
+        <polygon points="53,80 120,33 187,80" fill="#A8254C" opacity=".4"/>
+        <rect x="144" y="40" width="13" height="26" rx="2" fill="#6B4F3A" opacity=".8"/>
+        <path d="M150 40 Q146 28 153 18 Q158 10 150 4" stroke="#F5E6D3" stroke-width="1.5" fill="none" opacity=".22" stroke-linecap="round"/>
+        <rect x="102" y="104" width="36" height="43" rx="3" fill="#6B4F3A" opacity=".9"/>
+        <circle cx="133" cy="126" r="2.5" fill="#C9A84C" opacity=".9"/>
+        <rect x="70" y="86" width="26" height="22" rx="2" fill="#C9A84C" opacity=".22"/>
+        <line x1="83" y1="86" x2="83" y2="108" stroke="#C9A84C" stroke-width="1" opacity=".4"/>
+        <line x1="70" y1="97" x2="96" y2="97" stroke="#C9A84C" stroke-width="1" opacity=".4"/>
+        <rect x="144" y="86" width="26" height="22" rx="2" fill="#C9A84C" opacity=".22"/>
+        <line x1="157" y1="86" x2="157" y2="108" stroke="#C9A84C" stroke-width="1" opacity=".4"/>
+        <line x1="144" y1="97" x2="170" y2="97" stroke="#C9A84C" stroke-width="1" opacity=".4"/>
+        <ellipse cx="120" cy="148" rx="90" ry="5" fill="#1F3A5F" opacity=".3"/>
+        <text x="120" y="23" text-anchor="middle" fill="#C9A84C" font-size="17" opacity=".8">♡</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TIMELINE ══ -->
+<section id="timeline">
+  <div class="c">
+    <div class="tlt">
+      <span class="ey rv" style="display:block">Cada capítulo tem seu tempo</span>
+      <h2 class="st rv d1">Nossa<br/><em>Jornada</em></h2>
+    </div>
+    <div class="tltr">
+      <div class="tll"></div>
+      <div class="tli" data-tl>
+        <div class="tlc"><p class="tld">17 de junho, 2026</p><p class="tle2">Primeiro Encontro</p><p class="tlde">Liberdade, São Paulo</p></div>
+        <div class="tld2"></div><div></div>
+      </div>
+      <div class="tli" data-tl>
+        <div></div>
+        <div class="tld2"></div>
+        <div class="tlc" style="text-align:left"><p class="tld">O início</p><p class="tle2">Caminhada Juntos</p><p class="tlde">Cada sorriso, cada descoberta</p></div>
+      </div>
+      <div class="tli" data-tl>
+        <div class="tlc"><p class="tld">Família</p><p class="tle2">Eric na Nossa História</p><p class="tlde">Construindo um lar com amor</p></div>
+        <div class="tld2"></div><div></div>
+      </div>
+      <div class="tli" data-tl>
+        <div></div>
+        <div class="tld2"></div>
+        <div class="tlc" style="text-align:left"><p class="tld">Crescimento</p><p class="tle2">Fé e Propósito</p><p class="tlde">Cristo no centro de cada passo</p></div>
+      </div>
+      <div class="tli" data-tl>
+        <div class="tlc"><p class="tld" style="color:rgba(201,168,76,.45)">Em breve…</p><p class="tle2" style="color:rgba(255,255,255,.45)">Pedido de Casamento</p><p class="tlde">O capítulo mais esperado</p></div>
+        <div class="tld2 fut"></div><div></div>
+      </div>
+      <div class="tli" data-tl>
+        <div></div>
+        <div class="tld2 fut"></div>
+        <div class="tlc" style="text-align:left"><p class="tld" style="color:rgba(201,168,76,.45)">17 de junho, 2029</p><p class="tle2" style="color:rgba(255,255,255,.45)">Casamento</p><p class="tlde">O início de um novo capítulo eterno</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VERSÍCULOS ══ -->
+<section id="versiculos">
+  <div class="cw">
+    <span class="ey rv" style="display:block;text-align:center">A Palavra que nos guia</span>
+    <h2 class="st rv d1" style="text-align:center">Versículos que<br/><em>Falam de Nós</em></h2>
+    <p class="tx rv d2" style="text-align:center;max-width:540px;margin:0 auto 48px">Cada palavra abaixo foi escrita há milênios, mas parece ter sido guardada para este momento — para esta história.</p>
+
+    <!-- Tabs -->
+    <div class="vs-tabs rv d2">
+      <button class="vs-tab active" onclick="vsTab(this,'casamento')">💍 Casamento</button>
+      <button class="vs-tab" onclick="vsTab(this,'amor')">❤️ Amor</button>
+      <button class="vs-tab" onclick="vsTab(this,'fe')">✝️ Fé e Propósito</button>
+      <button class="vs-tab" onclick="vsTab(this,'familia')">👨‍👩‍👦 Família</button>
+      <button class="vs-tab" onclick="vsTab(this,'namoro')">💛 Namoro</button>
+    </div>
+
+    <!-- Casamento -->
+    <div class="vs-panel active" id="vs-casamento">
+      <div class="vc">
+        <span class="vc-tag">Gênesis 2:24</span>
+        <p class="vc-text">"Por isso o homem deixará pai e mãe e se unirá à sua mulher, e os dois se tornarão uma só carne."</p>
+        <div class="vc-ref">Gênesis 2:24</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Mateus 19:6</span>
+        <p class="vc-text">"Assim já não são dois, mas uma só carne. Portanto, o que Deus uniu, ninguém separe."</p>
+        <div class="vc-ref">Mateus 19:6</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Hebreus 13:4</span>
+        <p class="vc-text">"Honrem o casamento e mantenham pura a união conjugal, pois Deus certamente julgará os impuros e os adúlteros."</p>
+        <div class="vc-ref">Hebreus 13:4</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Eclesiastes 4:9-10</span>
+        <p class="vc-text">"É melhor ter companhia do que estar sozinho, porque maior é a recompensa do trabalho de duas pessoas. Se um cair, o amigo pode ajudá-lo a levantar-se."</p>
+        <div class="vc-ref">Eclesiastes 4:9-10</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Malaquias 2:15</span>
+        <p class="vc-text">"Portanto, tenham cuidado: ninguém seja infiel à mulher da sua mocidade."</p>
+        <div class="vc-ref">Malaquias 2:15</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Apocalipse 19:7</span>
+        <p class="vc-text">"Alegremo-nos, exultemos e a ele demos glória, pois chegou a hora do casamento do Cordeiro, e sua noiva já se preparou."</p>
+        <div class="vc-ref">Apocalipse 19:7</div>
+      </div>
+    </div>
+
+    <!-- Amor -->
+    <div class="vs-panel" id="vs-amor">
+      <div class="vc">
+        <span class="vc-tag">1 Cor 13:4-7</span>
+        <p class="vc-text">"O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. Tudo sofre, tudo crê, tudo espera, tudo suporta."</p>
+        <div class="vc-ref">1 Coríntios 13:4-7</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Efésios 5:25</span>
+        <p class="vc-text">"Maridos, amai vossas mulheres, como também Cristo amou a Igreja e a si mesmo se entregou por ela."</p>
+        <div class="vc-ref">Efésios 5:25</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Colossenses 3:14</span>
+        <p class="vc-text">"Acima de tudo, porém, revistam-se do amor, que é o elo perfeito."</p>
+        <div class="vc-ref">Colossenses 3:14</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Romanos 12:10</span>
+        <p class="vc-text">"Amai-vos cordialmente uns aos outros com afeto fraternal, preferindo-vos mutuamente."</p>
+        <div class="vc-ref">Romanos 12:10</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">1 Pedro 4:8</span>
+        <p class="vc-text">"Sobretudo, tende ardente amor uns para com os outros, porque o amor cobre uma multidão de pecados."</p>
+        <div class="vc-ref">1 Pedro 4:8</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Cantares 3:4</span>
+        <p class="vc-text">"Encontrei o amor da minha alma; agarrei-me a ele e não o deixarei ir."</p>
+        <div class="vc-ref">Cantares 3:4</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Efésios 4:2-3</span>
+        <p class="vc-text">"Com toda a humildade e mansidão, com longanimidade, suportando-vos uns aos outros em amor; procurando guardar a unidade do Espírito pelo vínculo da paz."</p>
+        <div class="vc-ref">Efésios 4:2-3</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">João 15:13</span>
+        <p class="vc-text">"Ninguém tem maior amor do que este: de dar alguém a sua vida pelos seus amigos."</p>
+        <div class="vc-ref">João 15:13</div>
+      </div>
+    </div>
+
+    <!-- Fé e Propósito -->
+    <div class="vs-panel" id="vs-fe">
+      <div class="vc">
+        <span class="vc-tag">Salmo 127:1</span>
+        <p class="vc-text">"Se não for o Senhor quem construir a casa, em vão trabalharão os que a edificam."</p>
+        <div class="vc-ref">Salmo 127:1</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Provérbios 3:5-6</span>
+        <p class="vc-text">"Confie no Senhor de todo o seu coração e não se apoie em seu próprio entendimento; reconheça-o em todos os seus caminhos, e ele endireitará as suas veredas."</p>
+        <div class="vc-ref">Provérbios 3:5-6</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Josué 24:15</span>
+        <p class="vc-text">"Quanto a mim e à minha casa, serviremos ao Senhor."</p>
+        <div class="vc-ref">Josué 24:15</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Jeremias 29:11</span>
+        <p class="vc-text">"Porque eu sei os planos que tenho para vocês, diz o Senhor, planos de fazê-los prosperar e não de causar dano, planos de dar a vocês esperança e um futuro."</p>
+        <div class="vc-ref">Jeremias 29:11</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">1 Samuel 7:12</span>
+        <p class="vc-text">"Até aqui nos ajudou o Senhor."</p>
+        <div class="vc-ref">1 Samuel 7:12</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Colossenses 3:15</span>
+        <p class="vc-text">"Que a paz de Cristo seja o árbitro em seus corações, visto que vocês foram chamados para viver em paz, como membros de um só corpo. E sejam agradecidos."</p>
+        <div class="vc-ref">Colossenses 3:15</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Filipenses 4:13</span>
+        <p class="vc-text">"Tudo posso naquele que me fortalece."</p>
+        <div class="vc-ref">Filipenses 4:13</div>
+      </div>
+    </div>
+
+    <!-- Família -->
+    <div class="vs-panel" id="vs-familia">
+      <div class="vc">
+        <span class="vc-tag">Salmo 127:3</span>
+        <p class="vc-text">"Herança do Senhor são os filhos; o fruto do ventre, um galardão."</p>
+        <div class="vc-ref">Salmo 127:3</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Provérbios 22:6</span>
+        <p class="vc-text">"Instrui o menino no caminho em que deve andar, e até quando envelhecer não se desviará dele."</p>
+        <div class="vc-ref">Provérbios 22:6</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Efésios 6:1-4</span>
+        <p class="vc-text">"Filhos, obedecei a vossos pais, no Senhor, porque isso é justo. E vós, pais, não provoqueis à ira os vossos filhos, mas criai-os na disciplina e na instrução do Senhor."</p>
+        <div class="vc-ref">Efésios 6:1-4</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Colossenses 3:13</span>
+        <p class="vc-text">"Suportando-vos uns aos outros, e perdoando-vos uns aos outros, se alguém tiver queixa contra outro; assim como Cristo vos perdoou, assim fazei vós também."</p>
+        <div class="vc-ref">Colossenses 3:13</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Êxodo 20:12</span>
+        <p class="vc-text">"Honra a teu pai e a tua mãe, para que os teus dias se prolonguem na terra que o Senhor teu Deus te dá."</p>
+        <div class="vc-ref">Êxodo 20:12</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Salmo 128:3</span>
+        <p class="vc-text">"Tua mulher será como videira frutífera dentro da tua casa; teus filhos, como mudas de oliveira ao redor da tua mesa."</p>
+        <div class="vc-ref">Salmo 128:3</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Provérbios 17:6</span>
+        <p class="vc-text">"Os filhos são a coroa dos velhos, e os pais são a glória dos filhos."</p>
+        <div class="vc-ref">Provérbios 17:6</div>
+      </div>
+    </div>
+
+    <!-- Namoro -->
+    <div class="vs-panel" id="vs-namoro">
+      <div class="vc">
+        <span class="vc-tag">Provérbios 18:22</span>
+        <p class="vc-text">"O homem que encontra uma esposa encontra um bem precioso e recebe o favor do Senhor."</p>
+        <div class="vc-ref">Provérbios 18:22</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Provérbios 5:18</span>
+        <p class="vc-text">"Alegra-te com a mulher da tua mocidade."</p>
+        <div class="vc-ref">Provérbios 5:18</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Eclesiastes 9:9</span>
+        <p class="vc-text">"Desfruta a vida com a mulher que amas, todos os dias da vida que Deus te deu debaixo do sol."</p>
+        <div class="vc-ref">Eclesiastes 9:9</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Cantares 2:16</span>
+        <p class="vc-text">"O meu amado é meu e eu sou dele."</p>
+        <div class="vc-ref">Cantares 2:16</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Gênesis 2:18</span>
+        <p class="vc-text">"Não é bom que o homem esteja só; farei para ele uma auxiliadora que lhe seja idônea."</p>
+        <div class="vc-ref">Gênesis 2:18</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Provérbios 31:10</span>
+        <p class="vc-text">"Mulher virtuosa, quem a achará? O seu valor muito excede o de rubis."</p>
+        <div class="vc-ref">Provérbios 31:10</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">2 Coríntios 6:14</span>
+        <p class="vc-text">"Não vos prendais a um jugo desigual com os incrédulos; porque que sociedade tem a justiça com a injustiça?"</p>
+        <div class="vc-ref">2 Coríntios 6:14</div>
+      </div>
+      <div class="vc">
+        <span class="vc-tag">Cantares 8:7</span>
+        <p class="vc-text">"As muitas águas não podem apagar o amor, nem os rios o submergir."</p>
+        <div class="vc-ref">Cantares 8:7</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ GALERIA ══ -->
+<section id="galeria">
+  <div class="cw">
+    <span class="ey rv" style="display:block;text-align:center">Momentos para sempre</span>
+    <h2 class="st rv d1" style="text-align:center">Nossa<br/><em>Galeria</em></h2>
+    <div class="gg" id="gallery">
+      <!-- Polaroids injected by JS -->
+    </div>
+    <p class="rv" style="margin-top:32px;font-family:var(--fb);font-style:italic;font-size:.92rem;color:rgba(245,230,211,.35);text-align:center">Clique em qualquer foto para ampliar</p>
+  </div>
+</section>
+
+<!-- ══ CARTA SECRETA ══ -->
+<section id="carta">
+  <div class="carta-wrap">
+    <span class="ey rv" style="display:block;text-align:center">Só para você</span>
+    <h2 class="st rv d1" style="text-align:center">Uma Carta<br/><em>para Gabriella</em></h2>
+    <p class="tx rv d2" style="text-align:center;max-width:480px;margin:0 auto 40px">Toque no envelope para descobrir uma mensagem especial guardada para você.</p>
+    <div class="rv d2" style="text-align:center">
+      <div class="carta-envelope" id="envelopeBtn" onclick="openCarta()">
+        <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="78" height="58" rx="4" fill="rgba(31,58,95,.3)" stroke="rgba(201,168,76,.5)" stroke-width="1.5"/>
+          <path d="M1 5 L40 34 L79 5" stroke="rgba(201,168,76,.6)" stroke-width="1.5" fill="none"/>
+          <path d="M1 59 L28 36" stroke="rgba(201,168,76,.4)" stroke-width="1" fill="none"/>
+          <path d="M79 59 L52 36" stroke="rgba(201,168,76,.4)" stroke-width="1" fill="none"/>
+          <circle cx="40" cy="34" r="6" fill="rgba(139,30,63,.7)" stroke="rgba(201,168,76,.5)" stroke-width="1"/>
+          <text x="40" y="38" text-anchor="middle" fill="#E2C47A" font-size="7">♡</text>
+        </svg>
+      </div>
+      <p class="carta-hint" id="cartaHint">Toque para abrir ♡</p>
+      <div class="carta-content" id="cartaContent">
+        <div class="carta-text">
+          <p>Minha Gabriella,</p>
+          <p>No dia em que te encontrei na Liberdade, não sabia que estava prestes a viver o capítulo mais bonito da minha vida. Você chegou com sua leveza, seu sorriso e sua luz — e algo dentro de mim soube, antes que minha cabeça entendesse, que você era especial.</p>
+          <p>Você me ensina todos os dias o que é amar com propósito. Você é professora não só na sala de aula — você ensina ao Eric o que é ser amado, e a mim o que é ser escolhido.</p>
+          <p>Eu não sei todos os capítulos que Deus preparou pra gente. Mas sei que quero vivê-los ao seu lado — cada domingo, cada desafio, cada conquista, cada risada, cada oração.</p>
+          <p>Este site é pequeno diante do que sinto. Mas foi feito com o maior cuidado, porque você merece o melhor que eu tenho para oferecer — sempre.</p>
+          <p>Com todo meu amor,</p>
+          <div class="carta-assinatura">Luis Fernando ♡</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MENSAGEM FINAL ══ -->
+<section id="mensagem">
+  <div class="c" style="text-align:center">
+    <div class="div rv" style="max-width:380px;margin:0 auto 52px"><div class="div-l"></div><span style="color:var(--ouro);font-size:1.1rem">♡</span><div class="div-l"></div></div>
+    <h2 class="mb rv d1">O Melhor <em>Ainda</em><br/>Está Por Vir</h2>
+    <div class="div rv d2" style="max-width:280px;margin:28px auto"><div class="div-l"></div><span class="div-s">✦</span><div class="div-l"></div></div>
+    <p class="ms rv d2">Cada capítulo desta história confirma que Deus continua escrevendo algo muito maior do que imaginamos.</p>
+    <p class="ms rv d3" style="margin-top:18px;color:rgba(245,230,211,.38)">E esta é apenas a primeira página.</p>
+    <div class="rv d3" style="margin-top:56px">
+      <svg width="180" height="36" viewBox="0 0 180 36" fill="none" style="margin:0 auto;display:block">
+        <circle cx="18" cy="18" r="1.5" fill="#E2C47A" opacity=".6"/>
+        <circle cx="46" cy="9" r="2" fill="#E2C47A" opacity=".8"/>
+        <circle cx="74" cy="24" r="1" fill="#E2C47A" opacity=".5"/>
+        <circle cx="90" cy="6" r="2.5" fill="#C9A84C" opacity=".9"/>
+        <line x1="90" y1="0" x2="90" y2="4" stroke="#C9A84C" stroke-width="1.5" opacity=".7"/>
+        <line x1="84" y1="6" x2="81" y2="6" stroke="#C9A84C" stroke-width="1.5" opacity=".6"/>
+        <line x1="96" y1="6" x2="99" y2="6" stroke="#C9A84C" stroke-width="1.5" opacity=".6"/>
+        <circle cx="108" cy="22" r="1.5" fill="#E2C47A" opacity=".6"/>
+        <circle cx="136" cy="11" r="2" fill="#E2C47A" opacity=".75"/>
+        <circle cx="162" cy="20" r="1.5" fill="#E2C47A" opacity=".55"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p class="fn">❤️ Luis Fernando &amp; Gabriella</p>
+  <p class="fv">"Até aqui nos ajudou o Senhor." — 1 Samuel 7:12</p>
+  <p class="fy" id="fyear"></p>
+</footer>
+
+<!-- ══ LIGHTBOX ══ -->
+<div id="lb" style="display:none;position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,.92);align-items:center;justify-content:center;cursor:pointer" onclick="closeLb()">
+  <div id="lbContent" style="max-width:90vw;max-height:90vh;display:flex;align-items:center;justify-content:center"></div>
+  <div style="position:absolute;bottom:32px;left:0;right:0;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,230,211,.6);font-size:1rem" id="lbCap"></div>
+</div>
+
+<script>
+// ══ INTRO ANIMATION ══
+const name = "Gabriella";
+const introEl = document.getElementById('introName');
+name.split('').forEach((c, i) => {
+  const s = document.createElement('span');
+  s.textContent = c === ' ' ? '\u00a0' : c;
+  s.style.animation = `fadeUp .6s ${.8 + i * .07}s forwards`;
+  introEl.appendChild(s);
+});
+
+function enterSite() {
+  document.getElementById('intro').classList.add('hide');
+  document.body.style.overflow = '';
+  startPetals();
+  const bgMusic = document.getElementById('bgMusic');
+  if (bgMusic) {
+    bgMusic.play().then(() => {
+      setPlayerUI(true);
+    }).catch(err => {
+      console.log("Autoplay impedido ou arquivo ausente:", err);
+    });
+  }
+}
+document.body.style.overflow = 'hidden';
+
+// ══ PARTICLES ══
+(function(){
+  const cv = document.getElementById('cv');
+  const cx = cv.getContext('2d');
+  let W, H, pts = [];
+  function resize(){ W = cv.width = innerWidth; H = cv.height = innerHeight; }
+  function init(){
+    pts = [];
+    const n = Math.floor(W * H / 16000);
+    for(let i=0;i<n;i++) pts.push({
+      x: Math.random()*W, y: Math.random()*H,
+      r: Math.random()*1.4+.3,
+      op: Math.random()*.55+.1,
+      sp: Math.random()*.18+.04,
+      tw: Math.random()*Math.PI*2,
+      ts: Math.random()*.018+.004,
+      col: Math.random()>.72?'#C9A84C':'#F5E6D3'
+    });
+  }
+  function draw(){
+    cx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.tw+=p.ts;
+      cx.beginPath(); cx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      cx.fillStyle=p.col; cx.globalAlpha=p.op*(0.5+0.5*Math.sin(p.tw)); cx.fill();
+      p.y-=p.sp; if(p.y<-2){p.y=H+2;p.x=Math.random()*W}
+    });
+    cx.globalAlpha=1; requestAnimationFrame(draw);
+  }
+  resize(); init(); draw();
+  window.addEventListener('resize',()=>{resize();init();},{passive:true});
+})();
+
+// ══ PETALS ══
+function startPetals(){
+  const container = document.getElementById('petals');
+  for(let i=0;i<18;i++){
+    const p = document.createElement('div');
+    p.className='petal';
+    p.style.left = Math.random()*100+'%';
+    p.style.animationDuration = (8+Math.random()*12)+'s';
+    p.style.animationDelay = (Math.random()*15)+'s';
+    p.style.width = (6+Math.random()*8)+'px';
+    p.style.height = (6+Math.random()*8)+'px';
+    p.style.opacity = Math.random()*.6+.2;
+    const hue = Math.random()>.5;
+    p.style.background = hue ? 'rgba(139,30,63,.55)' : 'rgba(245,230,211,.3)';
+    container.appendChild(p);
+  }
+}
+
+// ══ NAV ══
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('sc', scrollY>60);
+},{passive:true});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+document.getElementById('navToggle').addEventListener('click',()=>{
+  const nr = document.querySelector('.nr');
+  const open = nr.style.display==='flex';
+  Object.assign(nr.style,{
+    display: open?'none':'flex', flexDirection:'column',
+    position:'absolute', top:'58px', right:'20px',
+    background:'rgba(5,7,9,.97)', padding:'20px 28px',
+    borderRadius:'4px', border:'1px solid rgba(201,168,76,.18)',
+    gap:'16px', backdropFilter:'blur(20px)'
+  });
+  if(open) nr.style.display='none';
+});
+
+// ══ COUNTERS ══
+function loadHouseGoal() {
+  let currentVal = parseFloat(localStorage.getItem('houseCurrentVal')) || 0;
+  let goalVal = parseFloat(localStorage.getItem('houseGoalVal')) || 36000;
+  let percent = goalVal > 0 ? (currentVal / goalVal) * 100 : 0;
+  percent = Math.min(100, Math.max(0, percent));
+  
+  document.getElementById('cMoney').textContent = currentVal.toLocaleString('pt-BR');
+  document.getElementById('cGoalText').innerHTML = `meta: R$ ${goalVal.toLocaleString('pt-BR')} · prazo jun/2029`;
+  document.getElementById('progBar').style.width = percent + '%';
+}
+
+function editHouseGoal() {
+  let currentVal = localStorage.getItem('houseCurrentVal') || '0';
+  let goalVal = localStorage.getItem('houseGoalVal') || '36000';
+  
+  let newCurrent = prompt("Digite o valor atual economizado (somente números):", currentVal);
+  if (newCurrent === null) return;
+  
+  let newGoal = prompt("Digite o valor da meta total (somente números):", goalVal);
+  if (newGoal === null) return;
+  
+  let parsedCurrent = parseFloat(newCurrent.replace(/[^\d.]/g, '')) || 0;
+  let parsedGoal = parseFloat(newGoal.replace(/[^\d.]/g, '')) || 36000;
+  
+  localStorage.setItem('houseCurrentVal', parsedCurrent);
+  localStorage.setItem('houseGoalVal', parsedGoal);
+  
+  loadHouseGoal();
+}
+
+function updateCounters(){
+  const start = new Date('2026-06-17T00:00:00');
+  const target = new Date('2029-06-17T00:00:00');
+  const now = new Date();
+  const dias = Math.max(0, Math.floor((now - start)/(1000*60*60*24)));
+  const diaFalta = Math.max(0, Math.ceil((target - now)/(1000*60*60*24)));
+
+  document.getElementById('cDias').innerHTML = '<em>'+dias.toLocaleString('pt-BR')+'</em>';
+  document.getElementById('cMeta').innerHTML = '<em>'+diaFalta.toLocaleString('pt-BR')+'</em>';
+  loadHouseGoal();
+}
+
+updateCounters();
+
+// ══ GALLERY ══
+let galleryData = JSON.parse(localStorage.getItem('galleryData'));
+if (!galleryData || galleryData.length === 0) {
+  galleryData = [
+    { src: 'WhatsApp Image 2026-06-18 at 12.33.04.jpeg', cap: 'Nosso primeiro dia' },
+    { src: 'WhatsApp Image 2026-06-18 at 13.24.17.jpeg', cap: 'Sorriso da Gabi' },
+    { src: 'WhatsApp Image 2026-06-19 at 20.56.32.jpeg', cap: 'Luis & Eric' },
+    { src: 'WhatsApp Image 2026-06-20 at 09.47.27.jpeg', cap: 'Eric fofinho ♡' },
+    { src: 'WhatsApp Image 2026-06-20 at 10.24.01.jpeg', cap: 'Momentos de fé' },
+    { src: 'WhatsApp Image 2026-06-20 at 22.28.34.jpeg', cap: 'Flores para ela' },
+    { src: 'WhatsApp Image 2026-06-21 at 18.25.27.jpeg', cap: 'Eric lendo a Bíblia' },
+    { src: 'WhatsApp Image 2026-06-22 at 07.09.21.jpeg', cap: 'Eric sonhando' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.41.jpeg', cap: 'Juntos em família ♡' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.43.jpeg', cap: 'Nosso sorriso' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.44.jpeg', cap: 'Reunidos com alegria' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.50.jpeg', cap: 'Gabi no parque ☀️' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.50 (1).jpeg', cap: 'Gabi e Eric felizes' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.50 (2).jpeg', cap: 'Luis no sol ☀️' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.51.jpeg', cap: 'Gabi e Eric chamego' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.54.jpeg', cap: 'Luis e Eric juntinhos' },
+    { src: 'WhatsApp Image 2026-07-11 at 13.15.54 (1).jpeg', cap: 'Eric anjinho dormindo' },
+    { src: 'gabi_kissy.jpg', cap: 'Gabriella ♡' },
+    { src: 'eric_sleeping.jpg', cap: 'Eric dormindo' },
+    { src: 'luis_mirror.jpg', cap: 'Luis Visconti' },
+    { src: 'gabi_teal.jpg', cap: 'Gabriella linda' },
+    { src: 'eric_bear.jpg', cap: 'Eric ursinho' }
+  ];
+  localStorage.setItem('galleryData', JSON.stringify(galleryData));
+}
+
+function saveGallery() {
+  localStorage.setItem('galleryData', JSON.stringify(galleryData));
+}
+
+function renderGallery() {
+  const gg = document.getElementById('gallery');
+  if (!gg) return;
+  gg.innerHTML = '';
+  
+  galleryData.forEach((item, i) => {
+    const d = document.createElement('div');
+    d.className = 'pol rv vis';
+    const rot = (Math.random() * 4 - 2).toFixed(1);
+    d.style.setProperty('--rot', `${rot}deg`);
+    d.style.transitionDelay = (i * 0.03) + 's';
+    
+    const isVideo = item.src.startsWith('data:video/') || item.src.endsWith('.mp4') || item.src.endsWith('.mov') || item.src.endsWith('.webm');
+    let mediaHtml = '';
+    let badgeHtml = '';
+    
+    if (isVideo) {
+      mediaHtml = `<video src="${item.src}" muted loop playsinline autoplay></video>`;
+      badgeHtml = `<div class="video-badge">▶</div>`;
+    } else {
+      mediaHtml = `<img src="${item.src}" alt="${item.cap}" loading="lazy"/>`;
+    }
+    
+    d.innerHTML = `
+      <div class="pol-actions">
+        <button class="pol-btn" onclick="editPol(${i}, event)" title="Editar Legenda/Arquivo">✏️</button>
+        <button class="pol-btn" onclick="removePol(${i}, event)" title="Remover Item">🗑️</button>
+      </div>
+      <div class="pi" onclick="openLb('${item.src}', '${item.cap}')">
+        ${mediaHtml}
+        ${badgeHtml}
+      </div>
+      <div class="pc2">${item.cap}</div>
+    `;
+    gg.appendChild(d);
+  });
+  
+  // Add upload card at the end
+  const uploadCard = document.createElement('div');
+  uploadCard.className = 'pol rv vis';
+  uploadCard.style.setProperty('--rot', '1deg');
+  uploadCard.style.transitionDelay = (galleryData.length * 0.03) + 's';
+  uploadCard.innerHTML = `
+    <div class="pi">
+      <label style="display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;width:100%;height:100%;justify-content:center;color:rgba(245,230,211,.3)">
+        <input type="file" accept="image/*,video/*" style="display:none" onchange="addPol(this)"/>
+        <svg viewBox="0 0 40 40" fill="none" width="36" height="36" opacity=".35"><rect x="4" y="8" width="32" height="26" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="21" r="7" stroke="currentColor" stroke-width="1.5"/><circle cx="29" cy="12" r="2" fill="currentColor" opacity=".5"/></svg>
+        <span style="font-family:var(--fu);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase">Adicionar</span>
+      </label>
+    </div>
+    <div class="pc2">Novo Momento</div>
+  `;
+  gg.appendChild(uploadCard);
+}
+
+function addPol(input) {
+  const f = input.files[0]; if(!f) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    let caption = prompt("Digite uma legenda para este novo momento:");
+    if (caption === null) return;
+    galleryData.push({ src: e.target.result, cap: caption || "Novo Momento" });
+    saveGallery();
+    renderGallery();
+  };
+  reader.readAsDataURL(f);
+  input.value = '';
+}
+
+function editPol(index, event) {
+  event.stopPropagation();
+  const item = galleryData[index];
+  let newCap = prompt("Editar legenda:", item.cap);
+  if (newCap === null) return;
+  
+  item.cap = newCap;
+  
+  if (confirm("Deseja também alterar o arquivo (foto ou vídeo) para este momento?")) {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*,video/*';
+    fileInput.onchange = e => {
+      const f = e.target.files[0];
+      if (!f) {
+        saveGallery();
+        renderGallery();
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = ev => {
+        item.src = ev.target.result;
+        saveGallery();
+        renderGallery();
+      };
+      reader.readAsDataURL(f);
+    };
+    fileInput.click();
+  } else {
+    saveGallery();
+    renderGallery();
+  }
+}
+
+function removePol(index, event) {
+  event.stopPropagation();
+  if (confirm("Deseja realmente remover este item da galeria?")) {
+    galleryData.splice(index, 1);
+    saveGallery();
+    renderGallery();
+  }
+}
+
+// Initial render call
+renderGallery();
+
+// ══ PROFILES (QUEM SOMOS) ══
+let profilesData = JSON.parse(localStorage.getItem('profilesData'));
+if (!profilesData) {
+  profilesData = [
+    {
+      name: 'Luis Fernando',
+      role: 'Visconti',
+      img: 'luis_mirror.jpg',
+      bullets: ['Determinado', 'Sonhador', 'Homem de fé', 'Construindo um futuro sólido para a família']
+    },
+    {
+      name: 'Gabriella',
+      role: 'Trettel Dermondes',
+      img: 'gabi_teal.jpg',
+      bullets: ['Professora', 'Carinhosa', 'Inteligente', 'Transformando vidas pela educação']
+    }
+  ];
+  localStorage.setItem('profilesData', JSON.stringify(profilesData));
+}
+
+function saveProfiles() {
+  localStorage.setItem('profilesData', JSON.stringify(profilesData));
+}
+
+function renderProfiles() {
+  const container = document.getElementById('profilesContainer');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  profilesData.forEach((p, idx) => {
+    const div = document.createElement('div');
+    div.className = `pc rv vis d${idx + 2}`;
+    
+    let listHtml = p.bullets.map(b => `<li><span class="td"></span>${b}</li>`).join('');
+    
+    div.innerHTML = `
+      <button class="pc-edit-btn" onclick="editProfile(${idx}, event)" title="Editar Textos do Perfil">✏️</button>
+      <div class="pm" onclick="changeProfilePic(${idx}, event)" style="background-image: url('${p.img}'); background-size: cover; background-position: center; font-size: 0; cursor: pointer;" title="Clique para alterar a foto de perfil">${p.name.substring(0,2)}</div>
+      <h3 class="pn">${p.name}</h3>
+      <p class="pr">${p.role}</p>
+      <ul class="pt">
+        ${listHtml}
+      </ul>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function changeProfilePic(index, event) {
+  if (event) event.stopPropagation();
+  const p = profilesData[index];
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = 'image/*';
+  fileInput.onchange = e => {
+    const f = e.target.files[0];
+    if (!f) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      p.img = ev.target.result;
+      saveProfiles();
+      renderProfiles();
+      updateFamilyProfilePics();
+    };
+    reader.readAsDataURL(f);
+  };
+  fileInput.click();
+}
+
+function editProfile(index, event) {
+  if (event) event.stopPropagation();
+  const p = profilesData[index];
+  
+  let newName = prompt(`Editar nome de ${p.name}:`, p.name);
+  if (newName === null) return;
+  
+  let newRole = prompt(`Editar sobrenome/função de ${p.name}:`, p.role);
+  if (newRole === null) return;
+  
+  let bulletsStr = prompt(`Editar características (separadas por vírgula):`, p.bullets.join(', '));
+  if (bulletsStr === null) return;
+  
+  p.name = newName;
+  p.role = newRole;
+  p.bullets = bulletsStr.split(',').map(s => s.trim()).filter(s => s.length > 0);
+  
+  saveProfiles();
+  renderProfiles();
+}
+
+function updateFamilyProfilePics() {
+  const luisImgEl = document.querySelector('#eric div[style*="luis_mirror.jpg"]');
+  const gabiImgEl = document.querySelector('#eric div[style*="gabi_kissy.jpg"], #eric div[style*="gabi_teal.jpg"]');
+  
+  if (luisImgEl && profilesData[0].img) {
+    luisImgEl.style.backgroundImage = `url('${profilesData[0].img}')`;
+  }
+  if (gabiImgEl && profilesData[1].img) {
+    gabiImgEl.style.backgroundImage = `url('${profilesData[1].img}')`;
+  }
+}
+
+// Initial profiles render and synchronization
+renderProfiles();
+updateFamilyProfilePics();
+
+// ══ LIGHTBOX ══
+function openLb(src, cap) {
+  const lb = document.getElementById('lb');
+  const lbContent = document.getElementById('lbContent');
+  const lbCap = document.getElementById('lbCap');
+  
+  lbCap.textContent = cap;
+  
+  const isVideo = src.startsWith('data:video/') || src.endsWith('.mp4') || src.endsWith('.mov') || src.endsWith('.webm');
+  
+  if (isVideo) {
+    lbContent.innerHTML = `<video src="${src}" controls autoplay loop style="max-width:90vw;max-height:90vh;border:1px solid rgba(201,168,76,.3);border-radius:2px"></video>`;
+  } else {
+    lbContent.innerHTML = `<img src="${src}" alt="${cap}" style="max-width:90vw;max-height:90vh;border:1px solid rgba(201,168,76,.3);border-radius:2px"/>`;
+  }
+  
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLb() {
+  const lb = document.getElementById('lb');
+  const lbContent = document.getElementById('lbContent');
+  const video = lbContent.querySelector('video');
+  if (video) video.pause();
+  lb.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// ══ CARTA ══
+function openCarta(){
+  const c=document.getElementById('cartaContent');
+  const h=document.getElementById('cartaHint');
+  c.classList.add('open');
+  h.classList.add('hidden');
+  document.getElementById('envelopeBtn').style.opacity='.4';
+}
+
+// ══ SCROLL REVEAL ══
+const rvEls = document.querySelectorAll('.rv');
+const tlEls = document.querySelectorAll('.tli[data-tl]');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);} });
+},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+rvEls.forEach(el=>obs.observe(el));
+
+const tlObs = new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{ if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*90);tlObs.unobserve(e.target);} });
+},{threshold:.2});
+tlEls.forEach(el=>tlObs.observe(el));
+
+// ══ VERSÍCULOS TABS ══
+function vsTab(btn, id) {
+  // Update tab buttons
+  document.querySelectorAll('.vs-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  // Update panels
+  document.querySelectorAll('.vs-panel').forEach(p => p.classList.remove('active'));
+  const panel = document.getElementById('vs-' + id);
+  panel.classList.add('active');
+  // Animate cards in
+  panel.querySelectorAll('.vc').forEach((c, i) => {
+    c.classList.remove('vis');
+    c.style.transitionDelay = (i * 0.07) + 's';
+    setTimeout(() => c.classList.add('vis'), 40);
+  });
+}
+// Animate initial panel cards on load
+window.addEventListener('load', () => {
+  document.querySelectorAll('#vs-casamento .vc').forEach((c, i) => {
+    c.style.transitionDelay = (i * 0.08) + 's';
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){ c.classList.add('vis'); io.unobserve(c); } });
+    }, { threshold: 0.1 });
+    io.observe(c);
+  });
+});
+
+// ══ MUSIC PLAYLIST ══
+const playlist = [
+  {
+    "title": "Yellow",
+    "artist": "Coldplay",
+    "src": "Músicas/Coldplay%20-%20Yellow%20(Official%20Video)%20-%20Coldplay%20(youtube).mp3"
+  },
+  {
+    "title": "You (feat. Travis Scott) [Official Audio]",
+    "artist": "Don Toliver",
+    "src": "Músicas/Don%20Toliver%20-%20You%20(feat.%20Travis%20Scott)%20%5BOfficial%20Audio%5D%20-%20Don%20Toliver%20(youtube).mp3"
+  },
+  {
+    "title": "Leandro & Leonardo",
+    "artist": "Horizonte azul",
+    "src": "Músicas/Horizonte%20azul%20-%20Leandro%20%26%20Leonardo%20(youtube).mp3"
+  },
+  {
+    "title": "lisboa",
+    "artist": "Luis & Gabriella",
+    "src": "Músicas/lisboa.mp3"
+  },
+  {
+    "title": "Estar Com Você (DVD Juntos Somos Fortes)",
+    "artist": "Ponto de Equilíbrio",
+    "src": "Músicas/Ponto%20de%20Equil%C3%ADbrio%20-%20Estar%20Com%20Voc%C3%AA%20(DVD%20Juntos%20Somos%20Fortes)%20-%20Ponto%20de%20Equil%C3%ADbrio%20(youtube).mp3"
+  },
+  {
+    "title": "Bad Habit",
+    "artist": "Steve Lacy",
+    "src": "Músicas/Steve%20Lacy%20-%20Bad%20Habit%20(Official%20Video)%20-%20SteveLacyVEVO%20(youtube).mp3"
+  }
+];
+
+let currentTrack = 0;
+let musicPlaying = false;
+
+function loadTrack(index) {
+  const bgMusic = document.getElementById('bgMusic');
+  const track = playlist[index];
+  currentTrack = index;
+  document.getElementById('mpTitle').textContent = track.title;
+  document.getElementById('mpArtist').textContent = track.artist;
+  document.getElementById('mpTrackNum').textContent = (index + 1) + ' / ' + playlist.length;
+  document.getElementById('mpProgressBar').style.width = '0%';
+  if (track.src && track.src !== '' && !track.src.startsWith('http')) {
+    bgMusic.src = track.src;
+  }
+}
+
+function setPlayerUI(playing) {
+  musicPlaying = playing;
+  document.getElementById('mpBtn').textContent = playing ? '⏸' : '▶';
+  document.getElementById('mpEq').classList.toggle('paused', !playing);
+}
+
+function toggleMusic() {
+  const bgMusic = document.getElementById('bgMusic');
+  if (!bgMusic) return;
+  const track = playlist[currentTrack];
+  if (!track.src || track.src === '' || track.src.startsWith('http')) {
+    // Skip tracks without local files — go to next available
+    nextSong();
+    return;
+  }
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => {
+      setPlayerUI(true);
+    }).catch(err => {
+      console.log('Erro ao reproduzir áudio:', err);
+    });
+  } else {
+    bgMusic.pause();
+    setPlayerUI(false);
+  }
+}
+
+function nextSong() {
+  const wasPlaying = musicPlaying;
+  const bgMusic = document.getElementById('bgMusic');
+  bgMusic.pause();
+  currentTrack = (currentTrack + 1) % playlist.length;
+  loadTrack(currentTrack);
+  const track = playlist[currentTrack];
+  if (wasPlaying && track.src && track.src !== '' && !track.src.startsWith('http')) {
+    bgMusic.play().then(() => setPlayerUI(true)).catch(() => {});
+  } else {
+    setPlayerUI(false);
+  }
+}
+
+function prevSong() {
+  const wasPlaying = musicPlaying;
+  const bgMusic = document.getElementById('bgMusic');
+  bgMusic.pause();
+  currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+  loadTrack(currentTrack);
+  const track = playlist[currentTrack];
+  if (wasPlaying && track.src && track.src !== '' && !track.src.startsWith('http')) {
+    bgMusic.play().then(() => setPlayerUI(true)).catch(() => {});
+  } else {
+    setPlayerUI(false);
+  }
+}
+
+function seekMusic(e) {
+  const bgMusic = document.getElementById('bgMusic');
+  if (!bgMusic.duration) return;
+  const rect = e.currentTarget.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const pct = x / rect.width;
+  bgMusic.currentTime = pct * bgMusic.duration;
+}
+
+// Progress bar update
+const bgMusicEl = document.getElementById('bgMusic');
+bgMusicEl.addEventListener('timeupdate', () => {
+  if (bgMusicEl.duration) {
+    const pct = (bgMusicEl.currentTime / bgMusicEl.duration) * 100;
+    document.getElementById('mpProgressBar').style.width = pct + '%';
+  }
+});
+bgMusicEl.addEventListener('ended', () => {
+  nextSong();
+});
+
+// Initialize first track display
+loadTrack(0);
+
+// ══ FOOTER ══
+document.getElementById('fyear').textContent='© '+new Date().getFullYear()+' · Com amor, Luis Fernando & Gabriella';
+</script>
+</body>
+</html>
